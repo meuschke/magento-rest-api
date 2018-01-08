@@ -15,6 +15,7 @@ internals.create = function (config) {
         throw new Error('options.host required (example: www.mymagentosite.com)');
     }
 
+    this.auth = config.auth || null;
     this.oauth = internals.getOAuth(config);
     this.options = config;
     this.makePath = internals.makePath.bind(this);
